@@ -1,36 +1,46 @@
-# AfroDiabDB: Ethnobotanical & Cheminformatics Database
+# AfroDiabDB v1.2: A Curated Chemoinformatics Database of Antidiabetic Phytochemicals from African Medicinal Flora
 
-## Overview
-**AfroDiabDB** is an open-access ethnobotanical and cheminformatics database cataloging anti-diabetic phytochemicals isolated from African medicinal plants.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)
+![RDKit](https://img.shields.io/badge/RDKit-2023.03%2B-green.svg)
+![License](https://img.shields.io/badge/License-CC--BY--4.0-lightgrey.svg)
+![Status](https://img.shields.io/badge/Status-Publication--Ready-brightgreen)
 
-The **v1.1 release** integrates literature-derived ethnobotanical information with PubChem API verification, RDKit-computed molecular descriptors, drug-likeness evaluations, and chemical space mapping.
+##  Overview
+**AfroDiabDB v1.2** is an open-access, manually curated ethnobotanical and chemoinformatics database cataloging antidiabetic phytochemicals isolated from African medicinal flora. 
 
----
-
-## Release v1.1 Metrics Summary
-- **Total Ethnobotanical Records:** 223 entries across 17 standardized headings.
-- **Unique Chemical Entities:** 122 validated unique chemical structures.
-- **Lipinski Compliance:** 82.0% (<= 1 violation).
-- **Chemical Space Coverage (PCA):** 88.7% cumulative variance captured (PC1 + PC2).
+The **v1.2 release** integrates literature-derived ethnobotanical information with PubChem API verification, RDKit-computed molecular descriptors, drug-likeness filter evaluations (Lipinski, Veber, Ghose), Quantitative Estimate of Drug-likeness (QED) scoring, and chemical space comparison against benchmark FDA-approved antidiabetic drugs.
 
 ---
 
-## Repository Directory Structure
-```
+##  Release v1.2 Metrics Summary
+
+* **Total Occurrence Records:** 248 curated entries across 37 standardized metadata fields.
+* **Unique Chemical Entities:** 217 validated unique chemical structures (202 canonical SMILES).
+* **Botanical Diversity:** 51 distinct African medicinal plant species spanning 28 families.
+* **Drug-Likeness Compliance:** >80% pass rate across standard oral bioavailability filters.
+* **Chemical Space Coverage (PCA):** Multi-dimensional PCA capturing chemical space overlap against reference FDA-approved antidiabetic drugs.
+
+---
+
+##  Repository Directory Structure
+
+```text
+AfroDiabDB/
 ├── data/
-│   ├── AfroDiabDB_v1.1_Full_Master_Curated.xlsx
-│   ├── AfroDiabDB_v1.1_Full_Master_Curated.csv
-│   └── AfroDiabDB_v1.1_Unique_Library_Curated.xlsx
+│   ├── AfroDiabDB_v1.0.xlsx
+│   ├── AfroDiabDB_v1.1.xlsx
+│   ├── AfroDiabDB_v1.2_final.xlsx                  # Master curated dataset
+│   └── AfroDiabDB_v1.2_Supplementary_Data.xlsx     # Supplementary Tables S1-S4
 ├── figures/
-│   ├── AfroDiabDB_Property_Distributions.png
-│   └── AfroDiabDB_Chemical_Space_PCA.png
+│   ├── Figure_3_1_Taxonomic_Distribution.png
+│   ├── Figure_3_2_Descriptor_Distributions.png
+│   ├── Figure_3_3_PCA_Chemical_Space.png
+│   ├── Figure_3_4_Compound_Classes.png
+│   └── Figure_3_5_Flagship_PCA_Overlay.png
+├── tables/
+│   └── AfroDiabDB_v1.2_Chapter3_Tables.xlsx        # Summary Tables 3.1-3.6
+├── notebooks/
+│   └── AfroDiabDB_v1_2_Chapter3_Workflow.ipynb     # Executable Google Colab Notebook
+├── requirements.txt
+├── LICENSE
 └── README.md
-```
-
----
-
-## Workflow Summary
-1. **Curation & Verification:** Standardized metadata and PubChem API verification.
-2. **Descriptor Computation:** RDKit evaluation of MW, LogP, HBD, HBA, TPSA, Rotatable Bonds, and QED scores.
-3. **Bioavailability Assessment:** Drug-likeness evaluations via Lipinski, Veber, and Ghose rules.
-4. **Chemical Space Mapping:** Principal Component Analysis (PCA) across physical descriptors.
