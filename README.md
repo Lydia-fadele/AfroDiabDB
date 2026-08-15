@@ -50,6 +50,13 @@ AfroDiabDB/
 ```
 
 ---
+---
+
+## 📖 Citation
+
+If you use **AfroDiabDB v1.2** in your research, please cite this dataset as follows:
+
+```bibtex
 @dataset{fadele2026afrodiabdb,
   author       = {Fadele, Lydia Omowumi},
   title        = {{AfroDiabDB v1.2: A Curated Chemoinformatics Database of Antidiabetic Phytochemicals from African Medicinal Flora}},
@@ -57,10 +64,8 @@ AfroDiabDB/
   year         = 2026,
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.21952954},
-  url          = {https://doi.org/10.5281/zenodo.21952954}
+  url          = {[https://doi.org/10.5281/zenodo.21952954](https://doi.org/10.5281/zenodo.21952954)}
 }
-```
-
 ---
 
 ## 👤 Author & Academic Affiliation
