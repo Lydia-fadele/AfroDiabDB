@@ -1,4 +1,4 @@
-# 🌿 AfroDiabDB v1.3: A Curated Chemoinformatics Database of African Antidiabetic Phytochemicals
+# AfroDiabDB v1.3: A Curated Chemoinformatics Database of African Antidiabetic Phytochemicals
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22046751.svg)](https://doi.org/10.5281/zenodo.22046751)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -85,6 +85,6 @@ If you use **AfroDiabDB v1.3** in your research, please cite this dataset as fol
 
 ## 👤 Author & Academic Affiliation
 
-**Lydia Onowumi Fadele**  
+**Lydia Omowumi Fadele**  
 *M.Sc. Drug Discovery and Development, University of Lagos*  
 📧 Contact: diamondlydia19@gmail.com
