@@ -1,26 +1,38 @@
-# AfroDiabDB v1.2: A Curated Chemoinformatics Database of Antidiabetic Phytochemicals from African Medicinal Flora
+# 🌿 AfroDiabDB v1.3: A Curated Chemoinformatics Database of African Antidiabetic Phytochemicals
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg) ![RDKit](https://img.shields.io/badge/RDKit-2023.03%2B-green.svg) ![License](https://img.shields.io/badge/License-CC--BY--4.0-lightgrey.svg) ![Status](https://img.shields.io/badge/Status-Publication--Ready-brightgreen)
-
-[![Open Chapter 2 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Lydia-fadele/AfroDiabDB/blob/main/notebooks/AfroDiabDB_v1_2_Chapter2_Pipeline.ipynb)
-[![Open Chapter 3 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Lydia-fadele/AfroDiabDB/blob/main/notebooks/AfroDiabDB_v1_2_Chapter3_Workflow.ipynb)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22046751.svg)](https://doi.org/10.5281/zenodo.22046751)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 
 ---
 
 ## 📌 Overview
-**AfroDiabDB v1.2** is an open-access, manually curated ethnobotanical and chemoinformatics database cataloging antidiabetic phytochemicals isolated from African medicinal flora.
 
-The **v1.2 release** integrates literature-derived ethnobotanical information with PubChem API verification, RDKit-computed molecular descriptors, drug-likeness filter evaluations (Lipinski, Veber, Ghose), Quantitative Estimate of Drug-likeness (QED) scoring, and chemical space comparison against benchmark FDA-approved antidiabetic drugs.
+**AfroDiabDB v1.3** (`AfroDiabDB_Master_23_Sheets`) is an open-access, manually curated ethnobotanical and chemoinformatics database cataloging antidiabetic phytochemicals isolated from African medicinal flora.
+
+The **v1.3 release** integrates literature-derived ethnobotanical information with PubChem API verification, RDKit-computed molecular descriptors, drug-likeness filter evaluations (*Lipinski, Veber, Ghose*), Quantitative Estimate of Drug-likeness (*QED*) scoring, and multi-dimensional chemical space comparison against benchmark FDA-approved antidiabetic drugs.
 
 ---
 
-## 📊 Release v1.2 Metrics Summary
+## 📊 Release v1.3 Metrics Summary
 
-* **Total Occurrence Records:** 248 curated entries across 37 standardized metadata fields.
-* **Unique Chemical Entities:** 217 validated unique chemical structures (202 canonical SMILES).
-* **Botanical Diversity:** 51 distinct African medicinal plant species spanning 28 families.
+* **Total Occurrence Records:** 248 curated entries across 38 standardized metadata fields.
+* **Unique Chemical Entities:** 203 validated unique chemical structures (canonical SMILES / InChIKeys).
+* **Botanical Diversity:** 49 distinct African medicinal plant species spanning 28 families.
 * **Drug-Likeness Compliance:** >80% pass rate across standard oral bioavailability filters.
 * **Chemical Space Coverage (PCA):** Multi-dimensional PCA capturing chemical space overlap against reference FDA-approved antidiabetic drugs.
+
+---
+
+## 💾 Multi-Format Data Availability
+
+To support computational workflows, molecular modeling, and database integration, **AfroDiabDB v1.3** is provided in three standardized file formats:
+
+| Format | File Path | Use Case |
+| :--- | :--- | :--- |
+| **Excel (`.xlsx`)** | `data/raw/AfroDiabDB_Master_23_Sheets.xlsx` | Master 23-sheet relational workbook containing all raw datasets, metadata schema, and statistical summary tables. |
+| **CSV (`.csv`)** | `data/processed/AfroDiabDB_v1.3_standard.csv`<br>`data/processed/AfroDiabDB_Unique_Structures.csv` | Machine-readable tabular datasets for pandas, R, and automated data science pipelines. |
+| **SDF (`.sdf`)** | `data/processed/AfroDiabDB_Unique_Structures.sdf` | 2D/3D structure files containing 3D-ready chemical representations and annotated property fields for virtual screening, docking, and QSAR. |
 
 ---
 
@@ -29,45 +41,50 @@ The **v1.2 release** integrates literature-derived ethnobotanical information wi
 ```text
 AfroDiabDB/
 ├── data/
-│   ├── AfroDiabDB_v1.0.xlsx
-│   ├── AfroDiabDB_v1.1.xlsx
-│   ├── AfroDiabDB_v1.2_final.xlsx            # Master curated dataset (37 columns)
-│   └── AfroDiabDB_v1.2_Supplementary_Data.xlsx # Supplementary Tables S1-S4
-├── figures/
-│   ├── Figure_3_1_Taxonomic_Distribution.png
-│   ├── Figure_3_2_Descriptor_Distributions.png
-│   ├── Figure_3_3_PCA_Chemical_Space.png
-│   ├── Figure_3_4_Compound_Classes.png
-│   └── Figure_3_5_Flagship_PCA_Overlay.png
-├── tables/
-│   └── AfroDiabDB_v1.2_Chapter3_Tables.xlsx  # Summary Tables 3.1-3.6
+│   ├── raw/
+│   │   └── AfroDiabDB_Master_23_Sheets.xlsx          # Master 23-sheet Excel database
+│   └── processed/
+│       ├── AfroDiabDB_v1.3_standard.csv              # Machine-readable occurrence CSV
+│       ├── AfroDiabDB_Unique_Structures.csv          # Machine-readable unique structures CSV
+│       ├── AfroDiabDB_Unique_Structures.sdf          # 2D/3D Chemical structure file (SDF)
+│       └── FDA_Antidiabetic_Benchmark.csv            # Benchmark set
+├── outputs/
+│   ├── figures/
+│   │   ├── Figure_3.1_Taxonomic_Distribution.png
+│   │   ├── Figure_3.2_Descriptor_Distributions.png
+│   │   ├── Figure_3.3_PCA_Chemical_Space.png
+│   │   └── Figure_3.9_PCA_Chemical_Space.png         # High-res chemical space plot
+│   └── tables/
+│       └── Table_3.6_Descriptor_Summary.csv          # Descriptor statistics table
 ├── notebooks/
-│   ├── AfroDiabDB_v1_2_Chapter2_Pipeline.ipynb # Chapter 2: Data Curation Pipeline
-│   └── AfroDiabDB_v1_2_Chapter3_Workflow.ipynb # Chapter 3: Results & Analysis
+│   └── AfroDiabDB_Master_Pipeline.ipynb             # Reproducible computational pipeline
 ├── requirements.txt
 ├── LICENSE
 └── README.md
 ```
 
 ---
----
 
 ## 📖 Citation
 
-If you use **AfroDiabDB v1.2** in your research, please cite this dataset as follows:
+If you use **AfroDiabDB v1.3** in your research, please cite this dataset as follows:
 
 ```bibtex
 @dataset{fadele2026afrodiabdb,
-  author       = {Fadele, Lydia Omowumi},
-  title        = {{AfroDiabDB v1.2: A Curated Chemoinformatics Database of Antidiabetic Phytochemicals from African Medicinal Flora}},
-  month        = aug,
-  year         = 2026,
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.21952954},
-  url          = {[https://doi.org/10.5281/zenodo.21952954](https://doi.org/10.5281/zenodo.21952954)}
+  author    = {Fadele, Lydia Onowumi},
+  title     = {{AfroDiabDB v1.3: A Curated Chemoinformatics Database of African Antidiabetic Phytochemicals}},
+  month     = aug,
+  year      = 2026,
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22046751},
+  url       = {https://doi.org/10.5281/zenodo.22046751}
 }
+```
+
 ---
 
 ## 👤 Author & Academic Affiliation
-**Lydia Omowumi Fadele**  
-*M.Sc. Drug Discovery and Development, University of Lagos*
+
+**Lydia Onowumi Fadele**  
+*M.Sc. Drug Discovery and Development, University of Lagos*  
+📧 Contact: diamondlydia19@gmail.com
