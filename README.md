@@ -11,7 +11,7 @@
 
 ![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)
 
-](https://creativecommons.org/licenses/by/4.0/)
+(https://creativecommons.org/licenses/by/4.0/)
 
 ---
 
@@ -149,6 +149,8 @@ If you use AfroDiabDB in your research, please cite:
 
 License
 This dataset is released under the Creative Commons Attribution 4.0 International License (CC BY 4.0). You are free to share and adapt the material for any purpose, provided appropriate credit is given.
+
+
 Author & Academic Affiliation
 Lydia Omowumi Fadele
 M.Sc. Drug Discovery and Development, University of Lagos
