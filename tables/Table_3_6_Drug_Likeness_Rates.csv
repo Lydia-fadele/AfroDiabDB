@@ -1,0 +1,7 @@
+Group,Filter,Pass,Fail,Total,Pass_Percent
+AfroDiabDB,Lipinski,158,43,201,78.6
+AfroDiabDB,Veber,130,71,201,64.7
+AfroDiabDB,Ghose,79,122,201,39.3
+Benchmark,Lipinski,18,1,19,94.7
+Benchmark,Veber,17,2,19,89.5
+Benchmark,Ghose,11,8,19,57.9
