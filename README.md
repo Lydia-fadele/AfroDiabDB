@@ -2,12 +2,12 @@
 
 **A Curated Chemoinformatics Database of Antidiabetic Phytochemicals from African Medicinal Plants**
 
-[
+
 
 ![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21952953-blue)
 
-](https://doi.org/10.5281/zenodo.21952953)
-[
+(https://doi.org/10.5281/zenodo.21952953)
+
 
 ![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)
 
@@ -154,6 +154,7 @@ Lydia Omowumi Fadele
 M.Sc. Drug Discovery and Development, University of Lagos
 Drug Discovery Scientist | Natural Product Chemist | Chemoinformatician
 📧 Contact: diamondlydia19@gmail.com
+
 
 Acknowledgements
 AfroDiabDB was developed as part of ongoing research into natural product-based drug discovery for diabetes management, drawing on structural and pharmacological data curated from published literature on African medicinal plants.
